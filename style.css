@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.center-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.coming-soon-text {
+  font-size: 4rem;
+  font-weight: bold;
+}

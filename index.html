@@ -34,7 +34,7 @@
   .main-title {
     flex-grow: 1;
     text-align: left;
-    padding-left: 30px; /* Aligns with .main padding */
+    padding-left: 30px; /* Matches .main's left padding */
   }
 
   .main-title h1 {
@@ -80,10 +80,10 @@
 
   .main {
     flex-grow: 1;
-    padding: 30px;
+    padding: 30px 60px 30px 30px;  /* top, right, bottom, left */
     background: #f9f9f9;
-    max-width: 700px;       /* NEW: narrows content width */
-    margin: 0 auto;         /* NEW: centers it */
+    max-width: 800px;
+    margin-left: 0;  /* Aligns flush with header on left */
   }
 
   .topic-content {
@@ -117,7 +117,7 @@
     .main-title {
       text-align: center;
       margin-top: 10px;
-      padding-left: 0; /* Remove offset on mobile */
+      padding-left: 0;
     }
 
     .sidebar-logo {
@@ -127,9 +127,11 @@
     .main {
       max-width: 100%;
       margin: 0;
+      padding: 20px;
     }
   }
 </style>
+
 
 </head>
 <body>

@@ -4,11 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Climate Aware</title>
+
+ <!-- Open Graph -->
+  <meta property="og:title" content="ClimateAware.info">
+  <meta property="og:description" content="Against denial and alarm stands true awareness.">
+  <meta property="og:image" content="https://www.climateaware.info/preview.png">
+  <meta property="og:url" content="https://www.climateaware.info">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ClimateAware.info">
+  <meta name="twitter:description" content="Against denial and alarm stands true awareness.">
+  <meta name="twitter:image" content="https://www.climateaware.info/preview.png">
+
  <style>
   body {
     margin: 0;
     font-family: Georgia, serif;
-    cursor: url('cursor.cur'), auto; /* 👈 Adds your custom cursor */
+    cursor: url('arrow.cur'), auto; /* Custom cursor globally */
+  }
+
+  a,
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    cursor: url('arrow.cur'), pointer; /* Custom cursor for clickable elements */
   }
 
   .header-row {
@@ -35,7 +56,7 @@
   .main-title {
     flex-grow: 1;
     text-align: left;
-    padding-left: 30px; /* Matches .main's left padding */
+    padding-left: 30px;
   }
 
   .main-title h1 {
@@ -81,10 +102,10 @@
 
   .main {
     flex-grow: 1;
-    padding: 30px 60px 30px 30px;  /* top, right, bottom, left */
+    padding: 30px 60px 30px 30px;
     background: #f9f9f9;
     max-width: 800px;
-    margin-left: 0;  /* Aligns flush with header on left */
+    margin-left: 0;
   }
 
   .topic-content {
@@ -113,7 +134,7 @@
       min-width: 0;
       flex-shrink: 1;
       border-bottom: 1px solid #ddd;
-      overflow-x: auto; /* Allows links to scroll if needed */
+      overflow-x: auto;
     }
 
     .sidebar ul {
@@ -154,7 +175,7 @@
     }
 
     body {
-      overflow-x: hidden; /* Prevent horizontal overflow */
+      overflow-x: hidden;
     }
   }
 </style>

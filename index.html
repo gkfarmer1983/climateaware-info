@@ -134,10 +134,95 @@
   }
 
   @media (max-width: 600px) {
-    .header-row,
+    body {
+      overflow-x: hidden;
+    }
+
+    .header-row {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .main-title {
+      order: -1;
+      text-align: center;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    .main-title h1 {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+
+    .sidebar-logo {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-logo img {
+      max-width: 100px;
+      height: auto;
+    }
+
     .content-row {
       flex-direction: column;
     }
+
+    .sidebar {
+      width: 100%;
+      min-width: 0;
+      border-bottom: none;
+      padding: 10px 20px;
+    }
+
+    .sidebar h2 {
+      display: none;
+    }
+
+    .sidebar ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      background: #eee;
+      text-align: center;
+      border-radius: 4px;
+      color: #444;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .main {
+      max-width: 100%;
+      padding: 10px 20px 40px;
+      margin: 0;
+    }
+
+    .topic-content {
+      display: block !important;
+    }
+
+    .return-link {
+      display: block;
+      margin: 30px 0;
+      text-align: right;
+      font-size: 0.9em;
+      color: #777;
+      text-decoration: underline;
+    }
+  }
 
     .sidebar {
       width: 100%;
@@ -208,13 +293,13 @@
     <div class="sidebar">
       <h2>Topics</h2>
       <ul>
-        <li><a href="#" onclick="showTopic('topic1')">What Drives Climate Change?</a></li>
-        <li><a href="#" onclick="showTopic('topic2')">The Incomplete Picture</a></li>
-        <li><a href="#" onclick="showTopic('topic3')">Attribution: Connecting Cause to Effect</a></li>
-        <li><a href="#" onclick="showTopic('topic4')">The Role of Policy and Politics</a></li>
-        <li><a href="#" onclick="showTopic('topic5')">Mitigation, Adaptation, and Risk</a></li>
-        <li><a href="#" onclick="showTopic('topic6')">Ethics and Communication</a></li>
-        <li><a href="#" onclick="showTopic('topic7')">What Do We Do With Uncertainty?</a></li>
+        <li><a href="#" href="#topic1">What Drives Climate Change?</a></li>
+        <li><a href="#" href="#topic2">The Incomplete Picture</a></li>
+        <li><a href="#" href="#topic3">Attribution: Connecting Cause to Effect</a></li>
+        <li><a href="#" href="#topic4">The Role of Policy and Politics</a></li>
+        <li><a href="#" href="#topic5">Mitigation, Adaptation, and Risk</a></li>
+        <li><a href="#" href="#topic6">Ethics and Communication</a></li>
+        <li><a href="#" href="#topic7">What Do We Do With Uncertainty?</a></li>
       </ul>
     </div>
 
@@ -250,6 +335,8 @@
 <p><em>Truth, in this domain, is rarely tidy. But if we want to respond wisely, we must begin by telling it plainly.</em></p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic2" class="topic-content">
         <h2>The Incomplete Picture</h2>
@@ -278,6 +365,8 @@
 <p>We cannot eliminate every unknown. But we can choose to treat uncertainty as part of the process, not as a threat. If climate science is to remain credible—not just among experts, but with the public—it must resist the temptation to close questions too quickly. Some of the most important truths begin in the gaps.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic3" class="topic-content">
         <h2>Attribution: Connecting Cause to Effect</h2>
@@ -310,6 +399,8 @@
 <p>In time, the evidence may grow stronger. The uncertainties may shrink. Until then, the best way forward is honesty—not about what we fear, but about what we know, and how we know it.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic4" class="topic-content">
         <h2>The Role of Policy and Politics</h2>
@@ -342,6 +433,8 @@
 <p>That is the work. And that is the bridge we’re here to build.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic5" class="topic-content">
         <h2>Mitigation, Adaptation, and Risk</h2>
@@ -382,6 +475,8 @@
 <p>The precautionary principle, if it is to mean anything, must apply in both directions. It must remind us not only of the dangers of doing nothing—but of the dangers of doing the wrong thing, in haste, without listening, and without the honesty to admit what we cannot yet know.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic6" class="topic-content">
         <h2>Ethics and Communication </h2>
@@ -424,6 +519,8 @@
 <p>That’s what we’re trying to build here.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
 
       <div id="topic7" class="topic-content">
         <h2>What Do We Do With Uncertainty?</h2>
@@ -466,17 +563,22 @@
 <p>And let’s begin there.</p>
 
       </div>
+<a href="#top" class="return-link">Return to Top</a>
+
     </div>
   </div>
 
   <script>
+  // Disable topic toggling on mobile devices
+  if (window.innerWidth > 600) {
     function showTopic(id) {
       document.querySelectorAll('.topic-content').forEach(div => {
         div.classList.remove('active');
       });
       document.getElementById(id).classList.add('active');
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>

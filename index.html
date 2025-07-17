@@ -8,6 +8,7 @@
   body {
     margin: 0;
     font-family: Georgia, serif;
+    cursor: url('cursor.cur'), auto; /* 👈 Adds your custom cursor */
   }
 
   .header-row {
@@ -102,62 +103,62 @@
   }
 
   @media (max-width: 600px) {
-  .header-row,
-  .content-row {
-    flex-direction: column;
-  }
+    .header-row,
+    .content-row {
+      flex-direction: column;
+    }
 
-  .sidebar {
-    width: 100%;
-    min-width: 0;
-    flex-shrink: 1;
-    border-bottom: 1px solid #ddd;
-    overflow-x: auto; /* Allows links to scroll if needed */
-  }
+    .sidebar {
+      width: 100%;
+      min-width: 0;
+      flex-shrink: 1;
+      border-bottom: 1px solid #ddd;
+      overflow-x: auto; /* Allows links to scroll if needed */
+    }
 
-  .sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+    .sidebar ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-  .sidebar li {
-    flex: 1 1 auto;
-    min-width: fit-content;
-    margin-bottom: 0;
-  }
+    .sidebar li {
+      flex: 1 1 auto;
+      min-width: fit-content;
+      margin-bottom: 0;
+    }
 
-  .sidebar a {
-    display: block;
-    padding: 8px 12px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    white-space: nowrap;
-    text-align: center;
-  }
+    .sidebar a {
+      display: block;
+      padding: 8px 12px;
+      background: #f0f0f0;
+      border-radius: 4px;
+      white-space: nowrap;
+      text-align: center;
+    }
 
-  .main-title {
-    text-align: center;
-    margin-top: 10px;
-    padding-left: 0;
-  }
+    .main-title {
+      text-align: center;
+      margin-top: 10px;
+      padding-left: 0;
+    }
 
-  .sidebar-logo {
-    justify-content: center;
-  }
+    .sidebar-logo {
+      justify-content: center;
+    }
 
-  .main {
-    max-width: 100%;
-    margin: 0;
-    padding: 20px;
-  }
+    .main {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
 
-  body {
-    overflow-x: hidden; /* Force hide anything beyond screen width */
+    body {
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
   }
-}
-
 </style>
+
 
 
 </head>

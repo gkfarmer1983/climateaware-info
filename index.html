@@ -133,14 +133,14 @@
     box-shadow: none;
   }
 
-  
-.mobile-stack {
+  .mobile-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .mobile-stack hr {
@@ -148,11 +148,97 @@
   margin: 20px auto;
 }
 
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
 
-  @media (max-width: 600px) {
-    body {
-      overflow-x: hidden;
-    }
+  .header-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .main-title {
+    order: -1;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .main-title h1 {
+    font-size: 2em;
+    margin: 10px 0;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .content-row {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    border-bottom: none;
+    padding: 10px 20px;
+    background: transparent;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 0;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    border-radius: 4px;
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 20px 40px;
+  }
+
+  .topic-content {
+    display: block !important;
+  }
+
+  .return-link {
+    display: block;
+    margin: 30px 0;
+    text-align: right;
+    font-size: 0.9em;
+    color: #777;
+    text-decoration: underline;
+  }
+}
 
     .header-row {
       flex-direction: column;
@@ -296,7 +382,7 @@
 </head>
 <body>
 
-  <div class="header-row"><div class="mobile-stack">
+  <div class="header-row">
     <div class="sidebar-logo">
       <img src="climate-aware-logo.png" alt="Logo" />
     </div>
@@ -584,17 +670,7 @@
     </div>
   </div>
 
-  <script>
-  // Disable topic toggling entirely if mobile
-  if (window.innerWidth > 600) {
-    function showTopic(id) {
-      document.querySelectorAll('.topic-content').forEach(div => {
-        div.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  }
-</script>
+  
 
 </body>
 </html>

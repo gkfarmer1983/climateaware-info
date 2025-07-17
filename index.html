@@ -23,6 +23,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-shrink: 0;
     }
 
     .sidebar-logo img {
@@ -46,6 +47,8 @@
 
     .sidebar {
       width: 200px;
+      min-width: 200px;
+      flex-shrink: 0;
       background: #fff;
       padding: 20px;
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
@@ -69,6 +72,9 @@
       text-decoration: none;
       color: purple;
       font-style: italic;
+      white-space: nowrap;
+      display: inline-block;
+      width: 100%;
     }
 
     .main {
@@ -90,6 +96,29 @@
     .topic-content h2 {
       font-size: 1.3em;
       font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .header-row,
+      .content-row {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        min-width: 0;
+        flex-shrink: 1;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .main-title {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .sidebar-logo {
+        justify-content: center;
+      }
     }
   </style>
 </head>

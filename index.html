@@ -4,123 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Climate Aware</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-    }
+ <style>
+  body {
+    margin: 0;
+    font-family: Georgia, serif;
+  }
 
-    .header-row {
-      display: flex;
-      align-items: center;
-      padding: 20px 30px;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+  .header-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
-    .sidebar-logo {
-      width: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
+  .sidebar-logo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
 
-    .sidebar-logo img {
-      width: 100%;
-      max-width: 120px;
-    }
+  .sidebar-logo img {
+    width: 100%;
+    max-width: 120px;
+  }
 
-    .main-title {
-      flex-grow: 1;
-      text-align: left;
-    }
+  .main-title {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 30px; /* Aligns with .main padding */
+  }
 
-    .main-title h1 {
-      font-size: 3em;
-      margin: 0;
-    }
+  .main-title h1 {
+    font-size: 3em;
+    margin: 0;
+  }
 
+  .content-row {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 300px;
+    min-width: 300px;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+
+  .sidebar h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: purple;
+    font-style: italic;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .main {
+    flex-grow: 1;
+    padding: 30px;
+    background: #f9f9f9;
+    max-width: 700px;       /* NEW: narrows content width */
+    margin: 0 auto;         /* NEW: centers it */
+  }
+
+  .topic-content {
+    display: none;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+
+  .topic-content.active {
+    display: block;
+  }
+
+  .topic-content h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .header-row,
     .content-row {
-      display: flex;
+      flex-direction: column;
     }
 
     .sidebar {
-      width: 300px;
-      min-width: 300px;
-      flex-shrink: 0;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    }
-
-    .sidebar h2 {
-      font-size: 1.2em;
-      margin-top: 0;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin-bottom: 10px;
-    }
-
-    .sidebar a {
-      text-decoration: none;
-      color: purple;
-      font-style: italic;
-      white-space: nowrap;
-      display: inline-block;
       width: 100%;
+      min-width: 0;
+      flex-shrink: 1;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .main-title {
+      text-align: center;
+      margin-top: 10px;
+      padding-left: 0; /* Remove offset on mobile */
+    }
+
+    .sidebar-logo {
+      justify-content: center;
     }
 
     .main {
-      flex-grow: 1;
-      padding: 30px;
-      background: #f9f9f9;
+      max-width: 100%;
+      margin: 0;
     }
+  }
+</style>
 
-    .topic-content {
-      display: none;
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-
-    .topic-content.active {
-      display: block;
-    }
-
-    .topic-content h2 {
-      font-size: 1.3em;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .header-row,
-      .content-row {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        min-width: 0;
-        flex-shrink: 1;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .main-title {
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .sidebar-logo {
-        justify-content: center;
-      }
-    }
-  </style>
 </head>
 <body>
 

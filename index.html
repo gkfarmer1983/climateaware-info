@@ -133,6 +133,22 @@
     box-shadow: none;
   }
 
+  
+.mobile-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mobile-stack hr {
+  width: 80%;
+  margin: 20px auto;
+}
+
+
   @media (max-width: 600px) {
     body {
       overflow-x: hidden;
@@ -280,7 +296,7 @@
 </head>
 <body>
 
-  <div class="header-row">
+  <div class="header-row"><div class="mobile-stack">
     <div class="sidebar-logo">
       <img src="climate-aware-logo.png" alt="Logo" />
     </div>
@@ -569,7 +585,7 @@
   </div>
 
   <script>
-  // Disable topic toggling on mobile devices
+  // Disable topic toggling entirely if mobile
   if (window.innerWidth > 600) {
     function showTopic(id) {
       document.querySelectorAll('.topic-content').forEach(div => {

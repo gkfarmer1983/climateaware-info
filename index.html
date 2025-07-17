@@ -2,42 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ClimateAware.info - Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Aware</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
-      font-family: "Times New Roman", Times, serif;
-      color: white;
+      font-family: Georgia, serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
     }
 
-    .container {
-      max-width: 800px;
+    .sidebar {
+      width: 200px;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     }
 
-    .center-image {
-      max-width: 100%;
-      max-height: 80vh; /* Limits image height to 80% of viewport */
-      height: auto;
+    .sidebar img {
+      width: 100%;
+      max-width: 120px;
       margin-bottom: 20px;
     }
 
-    .coming-soon-text {
-      font-size: 4rem;
+    .sidebar h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: purple;
+      font-style: italic;
+    }
+
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+      background: #f9f9f9;
+    }
+
+    .main h1 {
+      font-size: 3em;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .topic-content {
+      display: none;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .topic-content.active {
+      display: block;
+    }
+
+    .topic-content h2 {
+      font-size: 1.3em;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="climate-aware.png" alt="Climate Aware" class="center-image" />
-    <div class="coming-soon-text">COMING SOON</div>
+  <div class="sidebar">
+    <img src="climate-aware-logo.png" alt="Logo" />
+    <h2>Topics</h2>
+    <ul>
+      <li><a href="#" onclick="showTopic('topic1')">Topic #1</a></li>
+      <li><a href="#" onclick="showTopic('topic2')">Topic #2</a></li>
+      <li><a href="#" onclick="showTopic('topic3')">Topic #3</a></li>
+      <li><a href="#" onclick="showTopic('topic4')">Topic #4</a></li>
+      <li><a href="#" onclick="showTopic('topic5')">Topic #5</a></li>
+      <li><a href="#" onclick="showTopic('topic6')">Topic #6</a></li>
+      <li><a href="#" onclick="showTopic('topic7')">Topic #7</a></li>
+    </ul>
   </div>
+
+  <div class="main">
+    <h1>Climate Aware</h1>
+
+    <div id="topic1" class="topic-content active">
+      <h2>About this subject...</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar a ex in tincidunt. Suspendisse potenti...</p>
+    </div>
+
+    <div id="topic2" class="topic-content">
+      <h2>Topic 2</h2>
+      <p>Content for topic 2 goes here...</p>
+    </div>
+
+    <div id="topic3" class="topic-content">
+      <h2>Topic 3</h2>
+      <p>Content for topic 3 goes here...</p>
+    </div>
+
+    <div id="topic4" class="topic-content">
+      <h2>Topic 4</h2>
+      <p>Content for topic 4 goes here...</p>
+    </div>
+
+    <div id="topic5" class="topic-content">
+      <h2>Topic 5</h2>
+      <p>Content for topic 5 goes here...</p>
+    </div>
+
+    <div id="topic6" class="topic-content">
+      <h2>Topic 6</h2>
+      <p>Content for topic 6 goes here...</p>
+    </div>
+
+    <div id="topic7" class="topic-content">
+      <h2>Topic 7</h2>
+      <p>Content for topic 7 goes here...</p>
+    </div>
+  </div>
+
+  <script>
+    function showTopic(id) {
+      document.querySelectorAll('.topic-content').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>

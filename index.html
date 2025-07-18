@@ -212,7 +212,8 @@
     text-align: left;
   }
 
-  .topic-content {
+  /* Make all topic-content visible on mobile so anchor scroll works */
+  .main .topic-content {
     display: block !important;
   }
 }
@@ -286,13 +287,13 @@
     <div class="sidebar">
       <h2>Topics</h2>
       <ul>
-        <li><a href="#" href="#topic1" onclick="showTopic('topic1')">What Drives Climate Change?</a></li>
-        <li><a href="#" href="#topic2" onclick="showTopic('topic2')">The Incomplete Picture</a></li>
-        <li><a href="#" href="#topic3" onclick="showTopic('topic3')">Attribution: Connecting Cause to Effect</a></li>
-        <li><a href="#" href="#topic4" onclick="showTopic('topic4')">The Role of Policy and Politics</a></li>
-        <li><a href="#" href="#topic5" onclick="showTopic('topic5')">Mitigation, Adaptation, and Risk</a></li>
-        <li><a href="#" href="#topic6" onclick="showTopic('topic6')">Ethics and Communication</a></li>
-        <li><a href="#" href="#topic7" onclick="showTopic('topic7')">What Do We Do With Uncertainty?</a></li>
+        <li><a href="#" onclick="showTopic('topic1')">What Drives Climate Change?</a></li>
+        <li><a href="#" onclick="showTopic('topic2')">The Incomplete Picture</a></li>
+        <li><a href="#" onclick="showTopic('topic3')">Attribution: Connecting Cause to Effect</a></li>
+        <li><a href="#" onclick="showTopic('topic4')">The Role of Policy and Politics</a></li>
+        <li><a href="#" onclick="showTopic('topic5')">Mitigation, Adaptation, and Risk</a></li>
+        <li><a href="#" onclick="showTopic('topic6')">Ethics and Communication</a></li>
+        <li><a href="#" onclick="showTopic('topic7')">What Do We Do With Uncertainty?</a></li>
       </ul>
     </div>
 

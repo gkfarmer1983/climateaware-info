@@ -122,7 +122,7 @@
     display: block;
   }
 
-  .topic-content h2 {
+    .topic-content h2 {
     font-size: 1.3em;
     font-weight: bold;
   }
@@ -134,31 +134,35 @@
   }
 
   .mobile-only {
-  display: none;
-}
+    display: none;
+  }
 
-@media (max-width: 900px) {
-  .mobile-only {
+  .desktop-only {
     display: block;
-    font-family: Georgia, serif;
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
   }
 
-  .mobile-header {
-    text-align: center;
-    font-size: 2.2em;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
+  @media (max-width: 900px) {
+    .mobile-only {
+      display: block;
+      font-family: Georgia, serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
 
-  .mobile-logo {
-    display: block;
-    max-width: 140px;
-    height: auto;
-    margin: 0 auto 20px;
-  }
+    .mobile-header {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .mobile-logo {
+      display: block;
+      max-width: 140px;
+      height: auto;
+      margin: 0 auto 20px;
+    }
 
   .mobile-topics {
     display: flex;

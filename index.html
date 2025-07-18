@@ -122,7 +122,7 @@
     display: block;
   }
 
-    .topic-content h2 {
+  .topic-content h2 {
     font-size: 1.3em;
     font-weight: bold;
   }
@@ -134,61 +134,22 @@
   }
 
   .mobile-only {
-  display: none;
-}
+    display: none;
+  }
 
-@media (max-width: 900px) {
   .desktop-only {
-    display: none !important;
+    display: block;
   }
 
-  .mobile-only {
-  display: none;
-}
+  @media (max-width: 600px) {
+    .mobile-only {
+      display: block;
+    }
 
-@media (max-width: 900px) {
-  .desktop-only {
-    display: none !important;
+    .desktop-only {
+      display: none;
+    }
   }
-
-  .mobile-only {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    font-family: Georgia, serif;
-    padding: 40px 20px;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-
-  .mobile-header {
-    font-size: 2.4em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .mobile-logo {
-    max-width: 140px;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .mobile-link a {
-    font-size: 1.1em;
-    text-decoration: none;
-    color: #0077cc;
-    font-weight: bold;
-  }
-
-  .mobile-link a:hover {
-    text-decoration: underline;
-  }
-}
-
-
-
 
 </style>
 
@@ -470,7 +431,7 @@
     </div>
   </div>
 
-    <script>
+  <script>
     function showTopic(id) {
       document.querySelectorAll('.topic-content').forEach(div => {
         div.classList.remove('active');
@@ -479,17 +440,12 @@
     }
   </script>
 
-  <div class="mobile-only">
-  <h1 class="mobile-header">Climate Aware</h1>
-
-  <img src="climate-aware.png" alt="Climate Aware Logo" class="mobile-logo" />
-
-  <div class="mobile-link">
-    <a href="index2.html">Click here for mobile view.</a>
-  </div>
+</body>
 </div>
 
-
+<div class="mobile-only">
+    <h1>ClimateAware (Mobile)</h1>
+    <p>This is the simplified mobile layout.</p>
+  </div>
 </body>
 </html>
-

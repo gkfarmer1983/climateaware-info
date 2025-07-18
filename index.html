@@ -134,10 +134,88 @@
   }
 
   @media (max-width: 600px) {
-    .header-row,
-    .content-row {
-      flex-direction: column;
-    }
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-row,
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-title {
+    order: -1;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .main-title h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .sidebar {
+    width: auto;
+    min-width: 0;
+    border-bottom: none;
+    background: transparent;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10px;
+    box-shadow: none;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar li {
+    list-style: none;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 10px 15px;
+    background: #eee;
+    border-radius: 6px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .topic-content {
+    display: block !important;
+  }
+}
 
     .sidebar {
       width: 100%;
@@ -208,13 +286,13 @@
     <div class="sidebar">
       <h2>Topics</h2>
       <ul>
-        <li><a href="#" onclick="showTopic('topic1')">What Drives Climate Change?</a></li>
-        <li><a href="#" onclick="showTopic('topic2')">The Incomplete Picture</a></li>
-        <li><a href="#" onclick="showTopic('topic3')">Attribution: Connecting Cause to Effect</a></li>
-        <li><a href="#" onclick="showTopic('topic4')">The Role of Policy and Politics</a></li>
-        <li><a href="#" onclick="showTopic('topic5')">Mitigation, Adaptation, and Risk</a></li>
-        <li><a href="#" onclick="showTopic('topic6')">Ethics and Communication</a></li>
-        <li><a href="#" onclick="showTopic('topic7')">What Do We Do With Uncertainty?</a></li>
+        <li><a href="#" href="#topic1" onclick="showTopic('topic1')">What Drives Climate Change?</a></li>
+        <li><a href="#" href="#topic2" onclick="showTopic('topic2')">The Incomplete Picture</a></li>
+        <li><a href="#" href="#topic3" onclick="showTopic('topic3')">Attribution: Connecting Cause to Effect</a></li>
+        <li><a href="#" href="#topic4" onclick="showTopic('topic4')">The Role of Policy and Politics</a></li>
+        <li><a href="#" href="#topic5" onclick="showTopic('topic5')">Mitigation, Adaptation, and Risk</a></li>
+        <li><a href="#" href="#topic6" onclick="showTopic('topic6')">Ethics and Communication</a></li>
+        <li><a href="#" href="#topic7" onclick="showTopic('topic7')">What Do We Do With Uncertainty?</a></li>
       </ul>
     </div>
 

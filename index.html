@@ -134,22 +134,60 @@
   }
 
   .mobile-only {
-    display: none;
-  }
+  display: none;
+}
 
-  .desktop-only {
-    display: block;
-  }
-
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
   .desktop-only {
     display: none !important;
   }
 
   .mobile-only {
-    display: block !important;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: Georgia, serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .mobile-header {
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .mobile-logo {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .mobile-link a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+
+  .mobile-link a:hover {
+    text-decoration: underline;
   }
 }
+
+
 
 
 </style>
@@ -442,64 +480,15 @@
   </script>
 
   <div class="mobile-only">
-  <span id="top"></span>
-
   <h1 class="mobile-header">Climate Aware</h1>
 
   <img src="climate-aware.png" alt="Climate Aware Logo" class="mobile-logo" />
 
-  <div class="mobile-topics">
-    <a href="#topic1w">What Drives Climate Change?</a>
-    <a href="#topic2w">The Incomplete Picture</a>
-    <a href="#topic3w">Attribution: Connecting Cause to Effect</a>
-    <a href="#topic4w">The Role of Policy and Politics</a>
-    <a href="#topic5w">Mitigation, Adaptation, and Risk</a>
-    <a href="#topic6w">Ethics and Communication</a>
-    <a href="#topic7w">What Do We Do With Uncertainty?</a>
-  </div>
-
-  <div id="topic1w" class="mobile-section">
-    <h2>What Drives Climate Change?</h2>
-    <p>This is placeholder content for Topic 1.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic2w" class="mobile-section">
-    <h2>The Incomplete Picture</h2>
-    <p>This is placeholder content for Topic 2.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic3w" class="mobile-section">
-    <h2>Attribution: Connecting Cause to Effect</h2>
-    <p>This is placeholder content for Topic 3.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic4w" class="mobile-section">
-    <h2>The Role of Policy and Politics</h2>
-    <p>This is placeholder content for Topic 4.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic5w" class="mobile-section">
-    <h2>Mitigation, Adaptation, and Risk</h2>
-    <p>This is placeholder content for Topic 5.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic6w" class="mobile-section">
-    <h2>Ethics and Communication</h2>
-    <p>This is placeholder content for Topic 6.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
-  </div>
-
-  <div id="topic7w" class="mobile-section">
-    <h2>What Do We Do With Uncertainty?</h2>
-    <p>This is placeholder content for Topic 7.</p>
-    <div class="back-to-top"><a href="#top">Return to the Top</a></div>
+  <div class="mobile-link">
+    <a href="index2.html">Click here for mobile view.</a>
   </div>
 </div>
+
 
 </body>
 </html>

@@ -133,13 +133,30 @@
     box-shadow: none;
   }
 
-</style>
+  .mobile-only {
+    display: none;
+  }
 
+  .desktop-only {
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .mobile-only {
+      display: block;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+  }
+
+</style>
 
 
 </head>
 <body>
-
+<div class="desktop-only">
   <div class="header-row">
     <div class="sidebar-logo">
       <img src="climate-aware-logo.png" alt="Logo" />
@@ -423,5 +440,12 @@
     }
   </script>
 
+</body>
+</div>
+
+<div class="mobile-only">
+    <h1>ClimateAware (Mobile)</h1>
+    <p>This is the simplified mobile layout.</p>
+  </div>
 </body>
 </html>

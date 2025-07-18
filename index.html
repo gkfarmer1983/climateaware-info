@@ -134,22 +134,63 @@
   }
 
   .mobile-only {
-    display: none;
-  }
+  display: none;
+}
 
-  .desktop-only {
+@media (max-width: 900px) {
+  .mobile-only {
     display: block;
+    text-align: center;
+    padding: 20px;
+    font-family: Georgia, serif;
   }
 
-  @media (max-width: 900px) {
-    .mobile-only {
-      display: block;
-    }
-
-    .desktop-only {
-      display: none;
-    }
+  .mobile-header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
+
+  .mobile-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .mobile-topics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-section {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .mobile-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .back-to-top {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .back-to-top a {
+    font-size: 0.9em;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .back-to-top a:hover {
+    text-decoration: underline;
+  }
+}
+
 
 </style>
 
@@ -509,19 +550,14 @@
 
 </div>
 
-<div class="mobile-only" style="text-align: center; padding: 20px; font-family: Georgia, serif;">
-
-  <!-- Anchor target for "Back to the Top" links -->
+<div class="mobile-only">
   <span id="top"></span>
 
-  <!-- Header -->
-  <h1 style="font-size: 2em; font-weight: bold; margin-bottom: 10px;">Climate Aware</h1>
+  <h1 class="mobile-header">Climate Aware</h1>
 
-  <!-- Logo -->
-  <img src="climate-aware.png" alt="Climate Aware Logo" style="max-width: 120px; height: auto; margin-bottom: 20px;">
+  <img src="climate-aware.png" alt="Climate Aware Logo" class="mobile-logo" />
 
-  <!-- Topic Links -->
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px;">
+  <div class="mobile-topics">
     <a href="#topic1w">What Drives Climate Change?</a>
     <a href="#topic2w">The Incomplete Picture</a>
     <a href="#topic3w">Attribution: Connecting Cause to Effect</a>
@@ -531,51 +567,49 @@
     <a href="#topic7w">What Do We Do With Uncertainty?</a>
   </div>
 
-
-  <!-- Topic Sections -->
-  <div id="topic1w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic1w" class="mobile-section">
     <h2>What Drives Climate Change?</h2>
     <p>This is placeholder content for Topic 1.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic2w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic2w" class="mobile-section">
     <h2>The Incomplete Picture</h2>
     <p>This is placeholder content for Topic 2.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic3w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic3w" class="mobile-section">
     <h2>Attribution: Connecting Cause to Effect</h2>
     <p>This is placeholder content for Topic 3.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic4w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic4w" class="mobile-section">
     <h2>The Role of Policy and Politics</h2>
     <p>This is placeholder content for Topic 4.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic5w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic5w" class="mobile-section">
     <h2>Mitigation, Adaptation, and Risk</h2>
     <p>This is placeholder content for Topic 5.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic6w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic6w" class="mobile-section">
     <h2>Ethics and Communication</h2>
     <p>This is placeholder content for Topic 6.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
 
-  <div id="topic7w" style="text-align: left; margin-bottom: 40px;">
+  <div id="topic7w" class="mobile-section">
     <h2>What Do We Do With Uncertainty?</h2>
     <p>This is placeholder content for Topic 7.</p>
-    <div style="text-align: right;"><a href="#top">Back to the Top</a></div>
+    <div class="back-to-top"><a href="#top">Back to the Top</a></div>
   </div>
-
 </div>
+
 
 </body>
 </html>
